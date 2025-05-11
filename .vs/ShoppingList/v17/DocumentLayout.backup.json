@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Practice\\C#.Net\\ShoppingList\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C110E27F-E2C0-4B28-A405-2D6BFC4A559C}|ShoppingList\\ShoppingList.csproj|e:\\practice\\c#.net\\shoppinglist\\shoppinglist\\controllers\\mylistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C110E27F-E2C0-4B28-A405-2D6BFC4A559C}|ShoppingList\\ShoppingList.csproj|solutionrelative:shoppinglist\\controllers\\mylistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C110E27F-E2C0-4B28-A405-2D6BFC4A559C}|ShoppingList\\ShoppingList.csproj|e:\\practice\\c#.net\\shoppinglist\\shoppinglist\\data\\mylistdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C110E27F-E2C0-4B28-A405-2D6BFC4A559C}|ShoppingList\\ShoppingList.csproj|solutionrelative:shoppinglist\\data\\mylistdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C110E27F-E2C0-4B28-A405-2D6BFC4A559C}|ShoppingList\\ShoppingList.csproj|e:\\practice\\c#.net\\shoppinglist\\shoppinglist\\migrations\\20250504095317_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C110E27F-E2C0-4B28-A405-2D6BFC4A559C}|ShoppingList\\ShoppingList.csproj|solutionrelative:shoppinglist\\migrations\\20250504095317_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Practice\\C#.Net\\ShoppingList\\ShoppingList\\Migrations\\20250511085839_Seeding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ShoppingList\\Migrations\\20250511085839_Seeding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C110E27F-E2C0-4B28-A405-2D6BFC4A559C}|ShoppingList\\ShoppingList.csproj|e:\\practice\\c#.net\\shoppinglist\\shoppinglist\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C110E27F-E2C0-4B28-A405-2D6BFC4A559C}|ShoppingList\\ShoppingList.csproj|solutionrelative:shoppinglist\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C110E27F-E2C0-4B28-A405-2D6BFC4A559C}|ShoppingList\\ShoppingList.csproj|e:\\practice\\c#.net\\shoppinglist\\shoppinglist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C110E27F-E2C0-4B28-A405-2D6BFC4A559C}|ShoppingList\\ShoppingList.csproj|solutionrelative:shoppinglist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20250511085839_Seeding.cs",
+              "DocumentMoniker": "E:\\Practice\\C#.Net\\ShoppingList\\ShoppingList\\Migrations\\20250511085839_Seeding.cs",
+              "RelativeDocumentMoniker": "ShoppingList\\Migrations\\20250511085839_Seeding.cs",
+              "ToolTip": "E:\\Practice\\C#.Net\\ShoppingList\\ShoppingList\\Migrations\\20250511085839_Seeding.cs",
+              "RelativeToolTip": "ShoppingList\\Migrations\\20250511085839_Seeding.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T08:58:40.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20250504095317_Initial.cs",
+              "DocumentMoniker": "E:\\Practice\\C#.Net\\ShoppingList\\ShoppingList\\Migrations\\20250504095317_Initial.cs",
+              "RelativeDocumentMoniker": "ShoppingList\\Migrations\\20250504095317_Initial.cs",
+              "ToolTip": "E:\\Practice\\C#.Net\\ShoppingList\\ShoppingList\\Migrations\\20250504095317_Initial.cs",
+              "RelativeToolTip": "ShoppingList\\Migrations\\20250504095317_Initial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T09:53:19.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Practice\\C#.Net\\ShoppingList\\ShoppingList\\appsettings.json",
+              "RelativeDocumentMoniker": "ShoppingList\\appsettings.json",
+              "ToolTip": "E:\\Practice\\C#.Net\\ShoppingList\\ShoppingList\\appsettings.json",
+              "RelativeToolTip": "ShoppingList\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-04T09:39:47.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MyListDBContext.cs",
+              "DocumentMoniker": "E:\\Practice\\C#.Net\\ShoppingList\\ShoppingList\\Data\\MyListDBContext.cs",
+              "RelativeDocumentMoniker": "ShoppingList\\Data\\MyListDBContext.cs",
+              "ToolTip": "E:\\Practice\\C#.Net\\ShoppingList\\ShoppingList\\Data\\MyListDBContext.cs",
+              "RelativeToolTip": "ShoppingList\\Data\\MyListDBContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T03:41:28.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Practice\\C#.Net\\ShoppingList\\ShoppingList\\Program.cs",
+              "RelativeDocumentMoniker": "ShoppingList\\Program.cs",
+              "ToolTip": "E:\\Practice\\C#.Net\\ShoppingList\\ShoppingList\\Program.cs",
+              "RelativeToolTip": "ShoppingList\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T15:29:00.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyListController.cs",
+              "DocumentMoniker": "E:\\Practice\\C#.Net\\ShoppingList\\ShoppingList\\Controllers\\MyListController.cs",
+              "RelativeDocumentMoniker": "ShoppingList\\Controllers\\MyListController.cs",
+              "ToolTip": "E:\\Practice\\C#.Net\\ShoppingList\\ShoppingList\\Controllers\\MyListController.cs",
+              "RelativeToolTip": "ShoppingList\\Controllers\\MyListController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T14:40:47.131Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
