@@ -7,6 +7,7 @@ namespace ShoppingList.Data
     {
 
         public DbSet<MyShopingList> MyShopingLists { get; set; }
+        public DbSet<ShoppingItemDetail> ShoppingItemDetail { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
