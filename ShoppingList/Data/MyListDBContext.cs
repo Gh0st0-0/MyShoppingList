@@ -5,7 +5,16 @@ namespace ShoppingList.Data
 {
     public class MyListDBContext(DbContextOptions<MyListDBContext> options) : DbContext(options)
     {
-
+        /*
+         Migration Steps
+        1# Add-Migration Initial
+        2# Update-Database
+        3# Add-Migration Seeding
+        4# Update-Database
+        // Add new Table
+        5# Add-Migration ShoppingItemDetailRelation
+        6# Update-Database
+         */
         public DbSet<MyShopingList> MyShopingLists { get; set; }
         public DbSet<ShoppingItemDetail> ShoppingItemDetail { get; set; }
 

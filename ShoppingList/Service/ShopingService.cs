@@ -10,7 +10,9 @@ namespace ShoppingList.Service
 
         public async Task<List<MyShopingList>> GetAllListItems()
         {
-            return await _dbContext.MyShopingLists.ToListAsync();
+            return await _dbContext.MyShopingLists
+                                    .Include(i => i.shopingItemDetails)
+                                    .ToListAsync();
         }
 
         public async Task<MyShopingList> GetListItemByListId(int id)

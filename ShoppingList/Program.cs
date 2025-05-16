@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 using ShoppingList.Data;
+using ShoppingList.Service;
 using ShoppingList.ServiceUtilities;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 //builder.Services.AddDbContext<MyListDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("MyListSQLConnection")));
 builder.Services.AddDbContext<MyListDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("MyListConnection")));
-
+builder.Services.AddScoped<ShopingService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

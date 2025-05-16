@@ -21,6 +21,32 @@
   },
   {
     "ContainingType": "ShoppingList.Controllers.MyListController",
+    "Method": "AddNMewListItem",
+    "RelativePath": "api/MyList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "item",
+        "Type": "ShoppingList.Modals.MyShopingList",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ShoppingList.Modals.MyShopingList",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ShoppingList.Controllers.MyListController",
     "Method": "GetListItemById",
     "RelativePath": "api/MyList/id={id}",
     "HttpMethod": "GET",
@@ -36,6 +62,69 @@
     "ReturnTypes": [
       {
         "Type": "ShoppingList.Modals.MyShopingList",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ShoppingList.Controllers.MyListController",
+    "Method": "UpdateListItem",
+    "RelativePath": "api/MyList/id={id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateObject",
+        "Type": "ShoppingList.Modals.MyShopingList",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingList.Controllers.MyListController",
+    "Method": "DeleteItemFromList",
+    "RelativePath": "api/MyList/id={id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingList.Controllers.MyListController",
+    "Method": "GetAllItemForUser",
+    "RelativePath": "api/MyList/owner={userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ShoppingList.Modals.MyShopingList, ShoppingList, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
