@@ -31,7 +31,7 @@ namespace ShoppingList.Controllers
             }
             catch (ApplicationException ex)
             {
-                return NotFound();
+                return NotFound(ex);
             }
         }
 
@@ -45,7 +45,7 @@ namespace ShoppingList.Controllers
             }
             catch (ApplicationException ex)
             {
-                return NotFound();
+                return NotFound(ex);
             }
         }
 
@@ -54,12 +54,12 @@ namespace ShoppingList.Controllers
         {
             try
             {
-                _service.AddItemToList(item);
+                await _service.AddItemToList(item);
                 return CreatedAtAction(nameof(GetListItemById), new { id = item.ID }, item);
             }
             catch (ApplicationException ex)
             {
-                return BadRequest();
+                return BadRequest(ex);
             }
         }
 
@@ -68,12 +68,12 @@ namespace ShoppingList.Controllers
         {
             try
             {
-                _service.UpdateListItem(id, updateObject);
+                await _service.UpdateListItem(id, updateObject);
                 return NoContent();
             }
             catch (ApplicationException ex)
             {
-                return NotFound();
+                return NotFound(ex);
             }
         }
 
@@ -82,12 +82,12 @@ namespace ShoppingList.Controllers
         {
             try
             {
-                _service.DeleteItemFromList(id);
+                await _service.DeleteItemFromList(id);
                 return NoContent();
             }
             catch (ApplicationException ex)
             {
-                return NotFound();
+                return NotFound(ex);
             }
         }
 

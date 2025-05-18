@@ -30,7 +30,7 @@ namespace ShoppingList.Service
             return userList;
         }
 
-        public async void UpdateListItem(int id,MyShopingList updateObject)
+        public async Task<bool> UpdateListItem(int id,MyShopingList updateObject)
         {
             var item = await _dbContext.MyShopingLists.FindAsync(id);
             if (item == null)
@@ -44,18 +44,20 @@ namespace ShoppingList.Service
             item.ListOwner = updateObject.ListOwner;
 
             await _dbContext.SaveChangesAsync();
+            return true;
         }
 
-        public async void AddItemToList(MyShopingList item)
+        public async Task<bool> AddItemToList(MyShopingList item)
         {
             if (item == null)
                 throw new ApplicationException();
 
             _dbContext.MyShopingLists.Add(item);
             await _dbContext.SaveChangesAsync(); // update into Database
+            return true;
         }
 
-        public async void DeleteItemFromList(int id)
+        public async Task<bool> DeleteItemFromList(int id)
         {
             var item = await _dbContext.MyShopingLists.FindAsync(id);
             if (item == null)
@@ -65,6 +67,7 @@ namespace ShoppingList.Service
 
             _dbContext.MyShopingLists.Remove(item);
             await _dbContext.SaveChangesAsync();
+            return true;
         }
     }
 }
