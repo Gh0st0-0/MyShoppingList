@@ -3,12 +3,13 @@
     public class MyShopingList
     {
         public int ID { get; set; } 
-        public string ItemName { get; set; }
+        public required string ItemName { get; set; }
 
         public double ItemQuantity {  get; set; }
 
-        public string ListOwner {  get; set; }
-
+        //public string ListOwner { get; set; } = "";
+        public int ListOwnerId {  get; set; }
+        public ListOwner? Owner { get; set; }
         /// <summary>
         ///  Purchase price after tax and discounts
         /// </summary>

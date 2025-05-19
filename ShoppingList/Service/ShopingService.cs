@@ -22,13 +22,13 @@ namespace ShoppingList.Service
             return item;
         }
 
-        public List<MyShopingList> GetAllItemForUser(string userId)
-        {
-            List<MyShopingList> userList =  _dbContext.MyShopingLists.AsEnumerable().Where(items => items.ListOwner.ToUpper() == userId.ToUpper()).ToList();
-            if (userList == null || userList.Count == 0)
-                throw new ApplicationException();
-            return userList;
-        }
+        //public List<MyShopingList> GetAllItemForUser(string userId)
+        //{
+        //    List<MyShopingList> userList =  _dbContext.MyShopingLists.AsEnumerable().Where(items => items.ListOwner.ToUpper() == userId.ToUpper()).ToList();
+        //    if (userList == null || userList.Count == 0)
+        //        throw new ApplicationException();
+        //    return userList;
+        //}
 
         public async Task<bool> UpdateListItem(int id,MyShopingList updateObject)
         {
@@ -41,7 +41,7 @@ namespace ShoppingList.Service
             item.ItemName = updateObject.ItemName;
             item.ItemPrise = updateObject.ItemPrise;
             item.ItemQuantity = updateObject.ItemQuantity;
-            item.ListOwner = updateObject.ListOwner;
+            // item.ListOwner = updateObject.ListOwner;
 
             await _dbContext.SaveChangesAsync();
             return true;

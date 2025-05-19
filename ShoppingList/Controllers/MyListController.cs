@@ -26,7 +26,7 @@ namespace ShoppingList.Controllers
         {
             try
             {
-                var item = _service.GetListItemByListId(id);
+                var item = await _service.GetListItemByListId(id);
                 return Ok(item);
             }
             catch (ApplicationException ex)
@@ -35,19 +35,19 @@ namespace ShoppingList.Controllers
             }
         }
 
-        [HttpGet("owner={userId}")]
-        public ActionResult<List<MyShopingList>> GetAllItemForUser(string userId)
-        {
-            try
-            {
-                List<MyShopingList> userList = _service.GetAllItemForUser(userId);
-                return Ok(userList);
-            }
-            catch (ApplicationException ex)
-            {
-                return NotFound(ex);
-            }
-        }
+        //[HttpGet("owner={userId}")]
+        //public ActionResult<List<MyShopingList>> GetAllItemForUser(string userId)
+        //{
+        //    try
+        //    {
+        //        List<MyShopingList> userList = _service.GetAllItemForUser(userId);
+        //        return Ok(userList);
+        //    }
+        //    catch (ApplicationException ex)
+        //    {
+        //        return NotFound(ex);
+        //    }
+        //}
 
         [HttpPost]
         public async Task<ActionResult<MyShopingList>> AddNMewListItem(MyShopingList item)

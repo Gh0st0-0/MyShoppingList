@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ShoppingList.Data;
 
@@ -11,9 +12,11 @@ using ShoppingList.Data;
 namespace ShoppingList.Migrations
 {
     [DbContext(typeof(MyListDBContext))]
-    partial class MyListDBContextModelSnapshot : ModelSnapshot
+    [Migration("20250519001701_ListOwnerRelationship")]
+    partial class ListOwnerRelationship
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
