@@ -8,7 +8,7 @@
         public double ItemQuantity {  get; set; }
 
         //public string ListOwner { get; set; } = "";
-        public int ListOwnerId {  get; set; }
+        public int? ListOwnerId {  get; set; }
         public ListOwner? Owner { get; set; }
         /// <summary>
         ///  Purchase price after tax and discounts

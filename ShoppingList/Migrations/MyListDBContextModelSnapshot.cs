@@ -57,7 +57,7 @@ namespace ShoppingList.Migrations
                     b.Property<double>("ItemQuantity")
                         .HasColumnType("float");
 
-                    b.Property<int>("ListOwnerId")
+                    b.Property<int?>("ListOwnerId")
                         .HasColumnType("int");
 
                     b.Property<int?>("shopingItemDetailsId")
@@ -77,39 +77,34 @@ namespace ShoppingList.Migrations
                             ID = 1,
                             ItemName = "Apples",
                             ItemPrise = 3.9900000000000002,
-                            ItemQuantity = 2.5,
-                            ListOwnerId = 0
+                            ItemQuantity = 2.5
                         },
                         new
                         {
                             ID = 2,
                             ItemName = "Bread",
                             ItemPrise = 2.4900000000000002,
-                            ItemQuantity = 1.0,
-                            ListOwnerId = 0
+                            ItemQuantity = 1.0
                         },
                         new
                         {
                             ID = 3,
                             ItemName = "Milk",
                             ItemPrise = 4.25,
-                            ItemQuantity = 1.5,
-                            ListOwnerId = 0
+                            ItemQuantity = 1.5
                         },
                         new
                         {
                             ID = 4,
                             ItemName = "Eggs",
                             ItemPrise = 5.9900000000000002,
-                            ItemQuantity = 12.0,
-                            ListOwnerId = 0
+                            ItemQuantity = 12.0
                         },
                         new
                         {
                             ID = 5,
                             ItemName = "Chicken",
-                            ItemQuantity = 1.2,
-                            ListOwnerId = 0
+                            ItemQuantity = 1.2
                         });
                 });
 
@@ -142,9 +137,7 @@ namespace ShoppingList.Migrations
                 {
                     b.HasOne("ShoppingList.Modals.ListOwner", "Owner")
                         .WithMany()
-                        .HasForeignKey("ListOwnerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ListOwnerId");
 
                     b.HasOne("ShoppingList.Modals.ShoppingItemDetail", "shopingItemDetails")
                         .WithMany()

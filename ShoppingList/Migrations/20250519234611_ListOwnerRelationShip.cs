@@ -5,7 +5,7 @@
 namespace ShoppingList.Migrations
 {
     /// <inheritdoc />
-    public partial class ListOwnerRelationship : Migration
+    public partial class ListOwnerRelationShip : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,8 +18,7 @@ namespace ShoppingList.Migrations
                 name: "ListOwnerId",
                 table: "MyShopingLists",
                 type: "int",
-                nullable: false,
-                defaultValue: 0);
+                nullable: true);
 
             migrationBuilder.CreateTable(
                 name: "ListOwners",
@@ -39,35 +38,35 @@ namespace ShoppingList.Migrations
                 keyColumn: "ID",
                 keyValue: 1,
                 column: "ListOwnerId",
-                value: 0);
+                value: null);
 
             migrationBuilder.UpdateData(
                 table: "MyShopingLists",
                 keyColumn: "ID",
                 keyValue: 2,
                 column: "ListOwnerId",
-                value: 0);
+                value: null);
 
             migrationBuilder.UpdateData(
                 table: "MyShopingLists",
                 keyColumn: "ID",
                 keyValue: 3,
                 column: "ListOwnerId",
-                value: 0);
+                value: null);
 
             migrationBuilder.UpdateData(
                 table: "MyShopingLists",
                 keyColumn: "ID",
                 keyValue: 4,
                 column: "ListOwnerId",
-                value: 0);
+                value: null);
 
             migrationBuilder.UpdateData(
                 table: "MyShopingLists",
                 keyColumn: "ID",
                 keyValue: 5,
                 column: "ListOwnerId",
-                value: 0);
+                value: null);
 
             migrationBuilder.CreateIndex(
                 name: "IX_MyShopingLists_ListOwnerId",
@@ -79,8 +78,7 @@ namespace ShoppingList.Migrations
                 table: "MyShopingLists",
                 column: "ListOwnerId",
                 principalTable: "ListOwners",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                principalColumn: "Id");
         }
 
         /// <inheritdoc />

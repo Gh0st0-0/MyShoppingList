@@ -35,19 +35,19 @@ namespace ShoppingList.Controllers
             }
         }
 
-        //[HttpGet("owner={userId}")]
-        //public ActionResult<List<MyShopingList>> GetAllItemForUser(string userId)
-        //{
-        //    try
-        //    {
-        //        List<MyShopingList> userList = _service.GetAllItemForUser(userId);
-        //        return Ok(userList);
-        //    }
-        //    catch (ApplicationException ex)
-        //    {
-        //        return NotFound(ex);
-        //    }
-        //}
+        [HttpGet("owner={userId}")]
+        public ActionResult<List<MyShopingList>> GetAllItemForUser(string userId)
+        {
+            try
+            {
+                List<MyShopingList> userList = _service.GetAllItemForUser(userId);
+                return Ok(userList);
+            }
+            catch (ApplicationException ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
 
         [HttpPost]
         public async Task<ActionResult<MyShopingList>> AddNMewListItem(MyShopingList item)

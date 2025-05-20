@@ -15,6 +15,7 @@ namespace ShoppingList.Data
         5# Add-Migration ShoppingItemDetailRelation
         6# Update-Database
         7# Add-Migration ListOwnerRelationShip // Resulting in Build failed // open for review
+        8# Update-Database
          */
         public DbSet<MyShopingList> MyShopingLists { get; set; }
         public DbSet<ShoppingItemDetail> ShoppingItemDetail { get; set; }

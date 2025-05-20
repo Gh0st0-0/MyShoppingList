@@ -12,6 +12,7 @@ namespace ShoppingList.Service
         {
             return await _dbContext.MyShopingLists
                                     .Include(i => i.shopingItemDetails)
+                                    .Include(i=> i.Owner)
                                     .ToListAsync();
         }
 
@@ -22,13 +23,14 @@ namespace ShoppingList.Service
             return item;
         }
 
-        //public List<MyShopingList> GetAllItemForUser(string userId)
-        //{
-        //    List<MyShopingList> userList =  _dbContext.MyShopingLists.AsEnumerable().Where(items => items.ListOwner.ToUpper() == userId.ToUpper()).ToList();
-        //    if (userList == null || userList.Count == 0)
-        //        throw new ApplicationException();
-        //    return userList;
-        //}
+        public List<MyShopingList> GetAllItemForUser(string userId)
+        {
+            int idOfUserAsOwner = _dbContext.ListOwners.AsEnumerable().Where(owner => owner.Name.ToUpper() == userId.ToUpper()).Select(o=> o.Id).FirstOrDefault();
+            List<MyShopingList> userList = _dbContext.MyShopingLists.AsEnumerable().Where(item => item.ListOwnerId == idOfUserAsOwner).ToList();//.Where(items => items.ListOwnerId == ;
+            if (userList == null || userList.Count == 0)
+                throw new ApplicationException("No List Found for this User " + userId);
+            return userList;
+        }
 
         public async Task<bool> UpdateListItem(int id,MyShopingList updateObject)
         {
