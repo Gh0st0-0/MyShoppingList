@@ -36,11 +36,11 @@ namespace ShoppingList.Controllers
         }
 
         [HttpGet("owner={userId}")]
-        public ActionResult<List<MyShopingList>> GetAllItemForUser(string userId)
+        public async Task<ActionResult<List<MyShopingList>>> GetAllItemForUser(string userId)
         {
             try
             {
-                List<MyShopingList> userList = _service.GetAllItemForUser(userId);
+                List<MyShopingList> userList = await _service.GetAllItemForUser(userId);
                 return Ok(userList);
             }
             catch (ApplicationException ex)

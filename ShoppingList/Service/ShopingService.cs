@@ -23,13 +23,24 @@ namespace ShoppingList.Service
             return item;
         }
 
-        public List<MyShopingList> GetAllItemForUser(string userId)
+        public async Task<List<MyShopingList>> GetAllItemForUser(string userId)
         {
-            int idOfUserAsOwner = _dbContext.ListOwners.AsEnumerable().Where(owner => owner.Name.ToUpper() == userId.ToUpper()).Select(o=> o.Id).FirstOrDefault();
-            List<MyShopingList> userList = _dbContext.MyShopingLists.AsEnumerable().Where(item => item.ListOwnerId == idOfUserAsOwner).ToList();//.Where(items => items.ListOwnerId == ;
-            if (userList == null || userList.Count == 0)
-                throw new ApplicationException("No List Found for this User " + userId);
-            return userList;
+            // Validate input
+            if (string.IsNullOrWhiteSpace(userId))
+                throw new ArgumentException("User ID cannot be empty", nameof(userId));
+
+            // Single query to get both owner ID and shopping lists
+            var result = await (
+                from owner in _dbContext.ListOwners
+                where EF.Functions.Collate(owner.Name, "SQL_Latin1_General_CP1_CI_AI") == userId.ToUpper()
+                join list in _dbContext.MyShopingLists on owner.Id equals list.ListOwnerId
+                select list
+            ).Include(i => i.shopingItemDetails).Include(i => i.Owner).ToListAsync();
+
+            if (result.Count == 0)
+                throw new ApplicationException($"No List Found for this User {userId}");
+
+            return result;
         }
 
         public async Task<bool> UpdateListItem(int id,MyShopingList updateObject)
